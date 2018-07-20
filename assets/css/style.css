@@ -1,0 +1,25 @@
+
+
+ .btn{
+    background-color: white;
+    border-color: white;
+    
+}
+.btn:hover {
+    cursor:default !important;
+    background-color: white;
+    border-color: white;
+}
+.btn:focus {
+    background-color: white;
+    border-color: white;
+}
+.btn:active {
+    background-color: white;
+    border-color: white;
+}
+img{
+    height: 120px;
+    border-color: white;
+    background-color: white;
+}

@@ -7,9 +7,9 @@
     <title>Kristen's Psychic Game!</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <script src="assets/javascript/game.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
 </head>
@@ -26,7 +26,7 @@
             <div class="col">
 
             </div>
-            <div class="col-6">
+            <div class="col-8">
                 <p>In this game, the computer will choose a target score at random. The goal is to hit the target score exactly.</p>
                 <p>Each gem will have a different point value, which the computer chooses randomly at the start of the game.
                     No peeking! You'll need to click each gem once to find out the value. Each time you click the gem, your
@@ -42,8 +42,12 @@
             </div>
         </div>
         <div class="row">
-            <div class="col" id="gems">
+            <div class="col-6" id="gems">
                 <h4>Gem Collection</h4>
+                <button id="red-gem" class="btn btn-primary number" value="1"><img src="assets/images/red-gem.gif" alt="Red gem game piece" /></button>
+                <button id="blue-gem" class="btn btn-primary number" value="2"><img src="assets/images/blue-gem.gif" alt="Blue gem game piece" /></button>
+                <button id="green-gem" class="btn btn-primary number" value="3"><img src="assets/images/green-gem.gif" alt="Green gem game piece" /></button>
+                <button id="purple-gem" class="btn btn-primary number" value="4"><img src="assets/images/purple-gem.gif" alt="Purple gem game piece" /></button>
             </div>
             <div class="col" id="currentscore">
                 <h4>Current Score</h4>
