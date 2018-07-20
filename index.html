@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Kristen's Psychic Game!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="assets/javascript/game.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="jumbotron">
+        <h1 class="display-4">Gem Collector</h1>
+
+        <p>A fun, simple math game for anyone!</p>
+
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+
+            </div>
+            <div class="col-6">
+                <p>In this game, the computer will choose a target score at random. The goal is to hit the target score exactly.</p>
+                <p>Each gem will have a different point value, which the computer chooses randomly at the start of the game.
+                    No peeking! You'll need to click each gem once to find out the value. Each time you click the gem, your
+                    "Current Score" will increase by that gem's value.</p>
+                <p>If your "Current Score" matches your "Target Score" exactly, you win!</p>
+                <p>If your "Current Score" is higher than your "Target Score", you lose the game.</p>
+                <p>Once the game is over, it will log either the win or loss in your "Totals" section. Then the game restarts,
+                    with a new target score AND new gem values!</p>
+                <p>Have FUN!!!!</p>
+            </div>
+            <div class="col">
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col" id="gems">
+                <h4>Gem Collection</h4>
+            </div>
+            <div class="col" id="currentscore">
+                <h4>Current Score</h4>
+            </div>
+            <div class="col" id="targetscore">
+                <h4>Target Score</h4>
+            </div>
+            <div class="col" id="usertotals">
+                <h4>Your totals</h4>
+                <p id="wins"></p>
+                <p id="losses"></p>
+            </div>
+        </div>
+
+
+    </div>
+    <footer>
+        <p>Copyright 2018 by Kristen</p>
+    </footer>
+</body>
+
+</html>
