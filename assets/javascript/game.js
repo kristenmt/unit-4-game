@@ -1,15 +1,19 @@
 $(document).ready(function(){
 //create random values for 4 crystals as buttons--options 1-12 pts
-var redGemBtn = [Math.floor(Math.random()*1+12)];
-var blueGemBtn = [Math.floor(Math.random()*1+12)];
-var greenGemBtn = [Math.floor(Math.random()*1+12)];
-var purpleGemBtn = [Math.floor(Math.random()*1+12)];
+var redGemBtn = [Math.floor(Math.random()* 11) +1];
+console.log("red gem is " + redGemBtn);
+var blueGemBtn = [Math.floor(Math.random()* 11) +1];
+console.log("blue gem is " + blueGemBtn);
+var greenGemBtn = [Math.floor(Math.random()* 11) +1];
+console.log("green gem is " + greenGemBtn);
+var purpleGemBtn = [Math.floor(Math.random()* 11) +1];
+console.log("purple gem is " + purpleGemBtn);
 //for current score
 var currentScore = 0;
 $("#currentscore").text(currentScore);
 console.log("current score is " + currentScore);
 //for computer's choice of score
-var computerChoiceTarget = [Math.floor(Math.random()*19+120)];
+var computerChoiceTarget = [Math.floor(Math.random()* 101) +19];
 //prints target score
 $("#targetscore").text(computerChoiceTarget);
 console.log("target score is " + computerChoiceTarget);
@@ -23,11 +27,16 @@ console.log("number of losses is " + losses);
 
     //then create on-click
     //when clicked, score is updated
+// $("#red-gem").on("click", function(){
+//     var redGemBtnVal = $(this).attr(redGemBtn);
+//     currentScore += parseInt($(this).attr("value"));
+// 		$("#currentscore").html(currentScore);
+// });
 $("#red-gem").on("click", function(){
-    var redGemBtnVal = $(this).attr(redGemBtn);
-    redGemBtnVal = parseInt(redGemBtnVal);
-    currentScore += redGemBtn;
-})
+    currentScore = currentScore + redGemBtn;
+    $("#currentscore").text(currentScore);
+    console.log("new user score is " + currentScore);
+});
 
 //if user score matches computer choice, user wins
 
