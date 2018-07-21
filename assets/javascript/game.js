@@ -25,6 +25,16 @@ var losses = 0;
 $("#losses").text(losses);
 console.log("number of losses is " + losses);
 
+
+function lose() {
+	losses ++;
+	$("#losses").text(losses);
+};
+function win() {
+	wins ++;
+	$("#wins").text(wins);
+};
+
     //then create on-click
     //when clicked, score is updated
 
@@ -32,30 +42,74 @@ $("#red-gem").on("click", function(){
     currentScore = parseInt(currentScore) + parseInt(redGemBtn);
     $("#currentscore").text(currentScore);
     console.log("new user score is " + currentScore);
+    if (computerChoiceTarget === currentScore){
+        // $("#wins").text(wins);
+        win();
+    console.log("user wins ");
+    
+    }
+    else {
+        // $("#losses").text(losses);
+        lose();
+        console.log("user loses");
+    }
 });
 
 $("#blue-gem").on("click", function(){
     currentScore = parseInt(currentScore) + parseInt(blueGemBtn);
     $("#currentscore").text(currentScore);
     console.log("new user score is " + currentScore);
+    if (computerChoiceTarget === currentScore){
+        // $("#wins").text(wins);
+        win();
+    console.log("user wins ");
+    
+    }
+    else {
+        // $("#losses").text(losses);
+        lose();
+        console.log("user loses");
+    }
 });
 $("#green-gem").on("click", function(){
     currentScore = parseInt(currentScore) + parseInt(greenGemBtn);
     $("#currentscore").text(currentScore);
     console.log("new user score is " + currentScore);
+    if (computerChoiceTarget === currentScore){
+        // $("#wins").text(wins);
+        win();
+    console.log("user wins ");
+    
+    }
+    else {
+        // $("#losses").text(losses);
+        lose();
+        console.log("user loses");
+    }
 });
 $("#purple-gem").on("click", function(){
     currentScore = parseInt(currentScore) + parseInt(purpleGemBtn);
     $("#currentscore").text(currentScore);
     console.log("new user score is " + currentScore);
+    if (computerChoiceTarget === currentScore){
+        // $("#wins").text(wins);
+        win();
+    console.log("user wins ");
+    
+    }
+    else {
+        // $("#losses").text(losses);
+        lose();
+        console.log("user loses");
+    }
 });
 //if user score matches computer choice, user wins
 
-//if user score is higher than computer choice, user loses
+
+
+
+
 
 //game restarts with the win or loss
 
-// give a number value to each crystal button, then the computer can randomly change the value via java/jquery
-    // for html <button id="red-crystal" class="btn btn-primary number
-    //then in java/jquery $(number) val()
 });
