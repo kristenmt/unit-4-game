@@ -1,4 +1,3 @@
-
 $(document).ready(function(){
 //create random values for 4 crystals as buttons--options 1-12 pts
 var redGemBtn = [Math.floor(Math.random()*1+12)];
@@ -21,15 +20,14 @@ console.log("number of wins is " + wins);
 var losses = 0;
 $("#losses").text(losses);
 console.log("number of losses is " + losses);
-//create a for loop to go through each crystal button
-
-    //create a variable name for jquery button name
-    //then give it a class
-    //append to the div
 
     //then create on-click
     //when clicked, score is updated
-
+$("#red-gem").on("click", function(){
+    var redGemBtnVal = $(this).attr(redGemBtn);
+    redGemBtnVal = parseInt(redGemBtnVal);
+    currentScore += redGemBtn;
+})
 
 //if user score matches computer choice, user wins
 
