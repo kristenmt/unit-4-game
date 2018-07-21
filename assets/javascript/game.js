@@ -27,17 +27,28 @@ console.log("number of losses is " + losses);
 
     //then create on-click
     //when clicked, score is updated
-// $("#red-gem").on("click", function(){
-//     var redGemBtnVal = $(this).attr(redGemBtn);
-//     currentScore += parseInt($(this).attr("value"));
-// 		$("#currentscore").html(currentScore);
-// });
+
 $("#red-gem").on("click", function(){
-    currentScore = currentScore + redGemBtn;
+    currentScore = parseInt(currentScore) + parseInt(redGemBtn);
     $("#currentscore").text(currentScore);
     console.log("new user score is " + currentScore);
 });
 
+$("#blue-gem").on("click", function(){
+    currentScore = parseInt(currentScore) + parseInt(blueGemBtn);
+    $("#currentscore").text(currentScore);
+    console.log("new user score is " + currentScore);
+});
+$("#green-gem").on("click", function(){
+    currentScore = parseInt(currentScore) + parseInt(greenGemBtn);
+    $("#currentscore").text(currentScore);
+    console.log("new user score is " + currentScore);
+});
+$("#purple-gem").on("click", function(){
+    currentScore = parseInt(currentScore) + parseInt(purpleGemBtn);
+    $("#currentscore").text(currentScore);
+    console.log("new user score is " + currentScore);
+});
 //if user score matches computer choice, user wins
 
 //if user score is higher than computer choice, user loses
