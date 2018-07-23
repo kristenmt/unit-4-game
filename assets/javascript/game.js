@@ -26,15 +26,6 @@ console.log("number of wins is " + wins);
 var currentScore = 0;
 $("#currentscore").text(currentScore);
 console.log("current score is " + currentScore);
-//functions for adding win or loss point
-// function win() {
-// 	wins ++;
-// 	$("#totalwins").text(wins);
-// }
-// function lose() {
-// 	losses ++;
-// 	$("#totallosses").text(losses);
-// }
     //on-click for each crystal
     //when clicked, current score is updated
 
@@ -43,17 +34,13 @@ $("#red-gem").on("click", function(){
     $("#currentscore").text(currentScore);
     console.log("new user score is " + currentScore);
     if (computerChoiceTarget < currentScore) {
-        //$("#losses").text(losses);
         lose();
         console.log("user loses");
     }
     else if (computerChoiceTarget == currentScore) {
-        // $("#wins").text(wins);
         win();
     console.log("user wins ");
-    
     }
-    
 });
 
 $("#blue-gem").on("click", function(){
@@ -61,17 +48,13 @@ $("#blue-gem").on("click", function(){
     $("#currentscore").text(currentScore);
     console.log("new user score is " + currentScore);
     if (computerChoiceTarget < currentScore) {
-        //$("#losses").text(losses);
         lose();
         console.log("user loses");
     }
     else if (computerChoiceTarget == currentScore) {
-        //$("#wins").text(wins);
         win();
     console.log("user wins ");
-    
-    }
-    
+    }  
 });
 $("#green-gem").on("click", function(){
     currentScore = parseInt(currentScore) + parseInt(greenGemBtn);
@@ -79,15 +62,12 @@ $("#green-gem").on("click", function(){
     console.log("new user score is " + currentScore);
     
     if (computerChoiceTarget < currentScore) {
-       // $("#losses").text(losses);
         lose();
         console.log("user loses");
     }
     else if (computerChoiceTarget == currentScore) {
-        //$("#wins").text(wins);
         win();
     console.log("user wins ");
-    
     }
 });
 $("#purple-gem").on("click", function(){
@@ -95,46 +75,24 @@ $("#purple-gem").on("click", function(){
     $("#currentscore").text(currentScore);
     console.log("new user score is " + currentScore);
     if (computerChoiceTarget < currentScore){
-        //$("#losses").text(losses);
         lose();
-        // updatePage();
         console.log("user loses");
     }
     else if (computerChoiceTarget == currentScore) {
-        //$("#wins").text(wins);
         win();
-        // updatePage();
     console.log("user wins ");
-    
     }
-    
 });
 function lose() {
 	losses ++;
     $("#totallosses").text(losses);
-    // updatePage();
 };
 function win() {
     wins ++;
     console.log("this has fired");
     $("#totalwins").text(wins);
-    // updatePage();
-
 };
 
-// //if user score matches computer choice, user wins
-// if (computerChoiceTarget === currentScore) {
-//     // $("#wins").text(wins);
-//     win();
-// console.log("user wins ");
-
-// }
-// //if user score is higher than computer choice, user loses
-// else if (computerChoiceTarget < currentScore){
-//     // $("#losses").text(losses);
-//     lose();
-//     console.log("user loses");
-// }
 
 //game restarts with the win or loss
 
