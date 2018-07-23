@@ -47,7 +47,7 @@ $("#red-gem").on("click", function(){
         lose();
         console.log("user loses");
     }
-    else if (computerChoiceTarget === currentScore) {
+    else if (computerChoiceTarget == currentScore) {
         // $("#wins").text(wins);
         win();
     console.log("user wins ");
@@ -65,7 +65,7 @@ $("#blue-gem").on("click", function(){
         lose();
         console.log("user loses");
     }
-    else if (computerChoiceTarget === currentScore) {
+    else if (computerChoiceTarget == currentScore) {
         //$("#wins").text(wins);
         win();
     console.log("user wins ");
@@ -83,7 +83,7 @@ $("#green-gem").on("click", function(){
         lose();
         console.log("user loses");
     }
-    else if (computerChoiceTarget === currentScore) {
+    else if (computerChoiceTarget == currentScore) {
         //$("#wins").text(wins);
         win();
     console.log("user wins ");
@@ -97,13 +97,13 @@ $("#purple-gem").on("click", function(){
     if (computerChoiceTarget < currentScore){
         //$("#losses").text(losses);
         lose();
-        updatePage();
+        // updatePage();
         console.log("user loses");
     }
-    else if (computerChoiceTarget === currentScore) {
+    else if (computerChoiceTarget == currentScore) {
         //$("#wins").text(wins);
         win();
-        updatePage();
+        // updatePage();
     console.log("user wins ");
     
     }
@@ -112,13 +112,15 @@ $("#purple-gem").on("click", function(){
 function lose() {
 	losses ++;
     $("#totallosses").text(losses);
-    updatePage();
+    // updatePage();
 };
 function win() {
-	wins ++;
+    wins ++;
+    console.log("this has fired");
     $("#totalwins").text(wins);
-    updatePage();
-}
+    // updatePage();
+
+};
 
 // //if user score matches computer choice, user wins
 // if (computerChoiceTarget === currentScore) {
