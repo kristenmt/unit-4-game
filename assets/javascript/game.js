@@ -89,9 +89,18 @@ function lose() {
 };
 function win() {
     wins ++;
-    console.log("this has fired");
     $("#totalwins").text(wins);
 };
+function reset(){
+    computerChoiceTarget = [Math.floor(Math.random()* 101) +19];
+    $("#targetscore").text(computerChoiceTarget);
+    redGemBtn = [Math.floor(Math.random()* 11) +1];
+    blueGemBtn = [Math.floor(Math.random()* 11) +1];
+    greenGemBtn = [Math.floor(Math.random()* 11) +1];
+    purpleGemBtn = [Math.floor(Math.random()* 11) +1];
+    currentScore = 0;
+    $("#currentscore").text(currentScore);
+}
 
 
 //game restarts with the win or loss
