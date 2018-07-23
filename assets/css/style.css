@@ -1,11 +1,11 @@
 
-
+body{
+    background-image: url(../images/agsquare.png);
+}
  .btn{
     background-color: white;
-    border-color: white;
-    border-width: 0px;
-    border-style: none;
-    box-lines: 0;
+    border: 2px solid gray;
+
     
 }
 .btn:hover {
@@ -35,4 +35,35 @@ img{
 -webkit-box-shadow: none!important;
    box-shadow: none!important;
 
+}
+.jumbotron{
+    background-color: aliceblue;
+    text-align: center;
+    border-bottom: 6px double purple;
+}
+.jumbotron h1{
+    font-family: 'Lobster', cursive;
+    font-size: 65px;
+}
+p{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+}
+h3{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+h4{
+    font-family:'Lobster', cursive;
+}
+#bottom-row{
+    padding-bottom: 40px;
+}
+footer{
+    text-align: center;
+    background-color: aliceblue;
+    border-top: 6px double purple;
+    padding-top: 15px;
+    height: 40px;
+    font-size: 18px;
 }
