@@ -86,23 +86,29 @@ $("#purple-gem").on("click", function(){
 function lose() {
 	losses ++;
     $("#totallosses").text(losses);
+    reset();
 };
 function win() {
     wins ++;
     $("#totalwins").text(wins);
+    reset();
 };
+
+//game restarts with the win or loss
 function reset(){
     computerChoiceTarget = [Math.floor(Math.random()* 101) +19];
     $("#targetscore").text(computerChoiceTarget);
+    console.log("new target score is " + computerChoiceTarget);
     redGemBtn = [Math.floor(Math.random()* 11) +1];
+    console.log("new red gem is " + redGemBtn);
     blueGemBtn = [Math.floor(Math.random()* 11) +1];
+    console.log("new blue gem is " + blueGemBtn);
     greenGemBtn = [Math.floor(Math.random()* 11) +1];
+    console.log("new green gem is " + greenGemBtn);
     purpleGemBtn = [Math.floor(Math.random()* 11) +1];
+    console.log("new purple gem is " + purpleGemBtn);
     currentScore = 0;
     $("#currentscore").text(currentScore);
 }
-
-
-//game restarts with the win or loss
 
 });
